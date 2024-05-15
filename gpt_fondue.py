@@ -1,5 +1,4 @@
 
-   
 import numpy as np  
   
 def find_ways(n, k, a):  
@@ -25,31 +24,20 @@ def find_ways(n, k, a):
       
     # The answer is in the last considered 'current' row for remainder 0  
     return dp[n % 2][0]  
-  
-# Example usage  
-n = 5  # Number of packs  
-k = 3  # The divisor  
-a = [1, 2, 3, 4, 5]  # Cheese bites in each pack  
-  
-print(find_ways(n, k, a))  # Output the number of ways
-import sys  
-input = sys.stdin.read  
-def main():  
-    # Read input from standard input (for example, competitive programming environment)  
-    #data = input().split()  
-    data = "5 10 1 2 3 4 5".split()
-    k = int(data[0])  
-    n = int(data[1])  
-    a = list(map(int, data[2:2+n]))  
+
+# Read input from standard input (for example, competitive programming environment)  
+data = input().split()  
+#data = "6 9 5 7 2 1 8 876".split()
+n, k = map(int, input().split())  
+
+#n = int(data[0])  
+#k = int(data[1])  
+a = list(map(int, data[2:2+n]))  
       
-    # Get the result from the function  
-    result = find_ways(k, n, a)  
-      
-    # Print the result to standard output  
-    print(result)  
+# Get the result from the function  
+result = find_ways(n,k, a)  
+
+# Print the result to standard output
+print(result)  
   
-if __name__ == "__main__":  
-    main()  
-    
-    
 
