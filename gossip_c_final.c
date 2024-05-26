@@ -38,7 +38,7 @@ int main() {
     for (int i = 0; i < q; i++) {  
         int s, a, b;  
         scanf("%d %d %d", &s, &a, &b);  
-          
+        //if friends
         if (s == 0) {  
             if (find(p, a) == find(p, b + n)) {  
                 printf("NO\n");  
@@ -47,7 +47,7 @@ int main() {
                 unionSet(p, r, a, b);  
                 unionSet(p, r, a + n, b + n);  
             }  
-        } else {  
+        } else {  //if enemies
             if (find(p, a) == find(p, b)) {  
                 printf("NO\n");  
             } else {  
